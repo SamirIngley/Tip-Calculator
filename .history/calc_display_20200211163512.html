@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tip Calculator</title>
+</head>
+<body>
+    
+    <div class="main-content">
+        <div>
+            <form action="process.php" method="POST">
+            <div>
+                <label>Bill:</label>
+                <input id='bill' type="number" name="bill" placeholder="$">
+            </div>
+            <br>    
+            <div>
+                <label>Tip</label>
+                <input id='tip' type="number" name="tip" placeholder="tip amount">
+            </div>
+            <br>    
+            <div>
+                <label>Number of People</label>
+                <input id='numppl' type="number" name="numppl" placeholder="#">
+            </div>
+            <br>
+            <div>
+                <input type="submit" name="submit" value="Submit">
+            </div>
+            </form>
+        </div>
+    </div>
+
+   
+
+    <script> 
+
+        function calculateTip() {
+
+            const percent = inputTip.value
+            const tip = bill * percent / 100
+            const total = bill + tip
+            const bill = inputBill.value 
+            const people = inputPeople.value 
+
+            displayTip.innerHTML = tip.toFixed(2)  
+        }
+
+
+        const displayTip = document.getElementById('display-tip')
+        inputBill.addEventListnener('change', function(e) {
+            console.log(inputBill.value)
+            const newBillAMount = parseFloat(e.target.value)
+
+        })
+
+        </script>
+
+
+
+</body>
+</html>
