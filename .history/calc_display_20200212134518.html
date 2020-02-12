@@ -46,12 +46,12 @@
 
     <script> 
 
-        const inputBill = document.getElementById('bill')
-        const inputTip = document.getElementById('tip')
-        const inputNumppl = document.getElementById('numppl')
-        const form = document.getElementById('form')
-        const displayTip = document.getElementById('tip-display')
-        const displayTotal = document.getElementById('total-display')
+    const inputBill = document.getElementById('bill')
+    const inputTip = document.getElementById('tip')
+    const inputNumppl = document.getElementById('numppl')
+    const form = document.getElementById('form')
+    const displayTip = document.getElementById('tip-display')
+    const displayTotal = document.getElementById('total-display')
 
 
         function calculateTip() {
@@ -62,9 +62,6 @@
             const tip = bill * percent / 100
             const total = bill + tip
             console.log(total)
-            console.log(tip)
-            console.log(people)
-
             displayTip.innerHTML = `Tip: ${tip.toFixed(2)}`
             displayTotal.innerHTML = `Total: ${total.toFixed(2)}`
         }

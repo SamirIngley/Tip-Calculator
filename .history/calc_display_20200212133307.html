@@ -10,7 +10,6 @@
 
     <div class="main-content">
         <div>
-        <form id='form'>
             <div>
                 <label>Bill:</label>
                 <input id='bill' type="number" name="bill" placeholder="$">
@@ -29,58 +28,43 @@
             <div>
                 <input type="submit" name="submit" value="Submit">
             </div>
-        </form>
 
             
         </div>
-
-        <p id='tip-display'>
-        </p>
-
-        <p id='total-display'>
-        </p>
-
     </div>
 
    
 
     <script> 
 
-        const inputBill = document.getElementById('bill')
-        const inputTip = document.getElementById('tip')
-        const inputNumppl = document.getElementById('numppl')
-        const form = document.getElementById('form')
-        const displayTip = document.getElementById('tip-display')
-        const displayTotal = document.getElementById('total-display')
-
+    const inputBill = document.getElementById('bill')
+    const inputTip = document.getElementById('tip')
+    const inputNumppl = document.getElementById('numppl')
+    const inputSubmit = document.getElementById('submit')
 
         function calculateTip() {
 
-            const bill = parseInt(inputBill.value )
-            const people = inputNumppl.value 
+            const bill = inputBill.value 
+            const people = inputPeople.value 
             const percent = inputTip.value
             const tip = bill * percent / 100
             const total = bill + tip
-            console.log(total)
-            console.log(tip)
-            console.log(people)
 
-            displayTip.innerHTML = `Tip: ${tip.toFixed(2)}`
-            displayTotal.innerHTML = `Total: ${total.toFixed(2)}`
+            displayTip.innerHTML = tip.toFixed(2)  
         }
 
 
+        const displayTip = document.getElementById('display-tip')
 
-        form.addEventListener("submit", function(e) {
-            e.preventDefault()
-            calculateTip()
-        }) 
+        form.onsubmit = function(e) {
+            if 
+        }
 
-        // inputBill.addEventListnener('change', function(e) {
-        //     console.log(inputBill.value)
-        //     const newBillAMount = parseFloat(e.target.value)
+        inputBill.addEventListnener('change', function(e) {
+            console.log(inputBill.value)
+            const newBillAMount = parseFloat(e.target.value)
 
-        // })
+        })
 
     </script>
 
