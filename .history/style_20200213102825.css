@@ -10,12 +10,11 @@ body {
 .form {
     background-color: lightgreen;
     display: grid;
-    grid-template-columns: 300px 300px;
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-areas: "h h"
-                         "b d"
-                         "t d"
-                         "n y"
+    grid-template-columns: 500px 300px;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "b d"
+                         "t y"
+                         "n ."
                          "s p"
 
 }
@@ -24,46 +23,34 @@ body {
 .form {
     font-family: Arial, Helvetica, sans-serif; 
     font-size: 36px;  
-    font-weight: 2000;
+    font-weight: 100;
     justify-content: center;
     align-items: center;
     text-align: center;
     height: 500px;
     line-height: 30px;
-    margin: 20px;
+    margin: 10px;
     padding: 50px;
-    border-style: solid;
-    border-width: 10px;
-    border-color: black;
+    border-radius: 0.50em;
 } 
 
-.title {
-    grid-area: h;
-}
-
 .bill {
-    text-align: left;
     grid-area: b;
     font-weight: bold;
 }
 
 .tip {
-    text-align: left;
     grid-area: t;
     font-weight: bold;
 }
 
 .numppl {
-    text-align: left;
     grid-area: n;
     font-weight: bold;
 }
 
 .submit {
-    padding: 40px 180px 50px 0px;
     grid-area: s;
-    align-items: center;
-    
 }
 
 

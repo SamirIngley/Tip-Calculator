@@ -14,8 +14,8 @@ body {
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas: "h h"
                          "b d"
-                         "t d"
-                         "n y"
+                         "t y"
+                         "n ."
                          "s p"
 
 }
@@ -29,8 +29,8 @@ body {
     align-items: center;
     text-align: center;
     height: 500px;
-    line-height: 30px;
-    margin: 20px;
+    /* line-height: 30px; */
+    margin: 10px;
     padding: 50px;
     border-style: solid;
     border-width: 10px;
@@ -42,28 +42,22 @@ body {
 }
 
 .bill {
-    text-align: left;
     grid-area: b;
     font-weight: bold;
 }
 
 .tip {
-    text-align: left;
     grid-area: t;
     font-weight: bold;
 }
 
 .numppl {
-    text-align: left;
     grid-area: n;
     font-weight: bold;
 }
 
 .submit {
-    padding: 40px 180px 50px 0px;
     grid-area: s;
-    align-items: center;
-    
 }
 
 

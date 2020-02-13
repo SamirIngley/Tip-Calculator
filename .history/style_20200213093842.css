@@ -1,0 +1,50 @@
+body {
+    background-color: lightblue;
+    justify-content: center;
+    align-items: center;
+    /* margin: 100px; */
+    /* padding: 100px; */
+    display: flex;
+}
+
+.wrapper {
+    background-color: lightgreen;
+    display: grid;
+    grid-template-columns: 500px 300px;
+    grid-template-rows: 25% 100px auto;
+    height: 500px;
+    width: 800px;
+    grid-template-areas: "b ."
+                         "t ."
+                         "n ."
+                         "s ."
+
+}
+
+
+/* 
+.wrapper>form {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;   
+    text-align: center;
+    margin: 10px;
+    padding: 50px;
+} */
+
+
+.wrapper .form .bill {
+    grid-area: b;
+}
+
+.wrapper .form .tip {
+    grid-area: t;
+}
+
+.wrapper .form .numppl {
+    grid-area: n;
+}
+
+.wrapper .form .submit {
+    grid-area: s;
+}
+

@@ -14,8 +14,8 @@ body {
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas: "h h"
                          "b d"
-                         "t d"
-                         "n y"
+                         "t y"
+                         "n ."
                          "s p"
 
 }
@@ -60,10 +60,8 @@ body {
 }
 
 .submit {
-    padding: 40px 180px 50px 0px;
+    padding: 30px 170px 30px 0px;
     grid-area: s;
-    align-items: center;
-    
 }
 
 

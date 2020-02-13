@@ -1,0 +1,64 @@
+body {
+    background-color: lightblue;
+    justify-content: center;
+    align-items: center;
+    /* margin: 100px; */
+    /* padding: 100px; */
+    display: flex;
+}
+
+.form {
+    background-color: lightgreen;
+    display: grid;
+    grid-template-columns: 500px 300px;
+    grid-template-rows: 25% 100px auto;
+    height: 500px;
+    width: 800px;
+    grid-template-areas: "b d"
+                         "t p"
+                         "n y"
+                         "s ."
+
+}
+
+
+/* 
+.form {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 36px;  
+    text-align: center;
+    margin: 10px;
+    padding: 50px;
+} */
+
+
+.bill {
+    grid-area: b;
+}
+
+.tip {
+    grid-area: t;
+}
+
+.numppl {
+    grid-area: n;
+}
+
+.submit {
+    grid-area: s;
+}
+
+
+.tip-disp {
+    grid-area: d;
+}
+
+.total-disp {
+    grid-area: y
+}
+
+
+.pp-display {
+    grid-area: p
+}

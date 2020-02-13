@@ -14,8 +14,8 @@ body {
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas: "h h"
                          "b d"
-                         "t d"
-                         "n y"
+                         "t y"
+                         "n ."
                          "s p"
 
 }

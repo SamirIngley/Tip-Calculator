@@ -10,39 +10,40 @@
 <body>
 
     <form id='form' class='form'>
-        <div class='title'>
-            <h1>Tips</h1>
-        </div>
         <div class='bill'>
-            <label>Bill</label><br>
+            <label>Bill:</label>
             <input id='bill' type="number" name="bill" placeholder="$">
-        </div>  
+        </div>
+        <br>    
         <div class='tip'>
-            <label>Tip</label><br>
+            <label>Tip</label>
             <input id='tip' type="number" name="tip" placeholder="%">
         </div>
+        <br>    
         <div class='numppl'>
-            <label>People</label><br>
+            <label>Number of People</label>
             <input id='numppl' type="number" name="numppl" placeholder="#">
         </div>
-        <div class='submit'><br>
+        <br>
+        <div class='submit'>
             <input type="submit" name="submit" value="Submit">
         </div>
        
+        <div>
+            <p id='tip-display'>
+                Tip: 
+            </p>
 
-        <div id='total-display' class="total-disp">
-            Total:
+            <p id='total-display'>
+                Total:
+            </p>
+
+            <p id='total-pp-display'>
+                Per Person: 
+            </p>
         </div>
 
-        <div id='tip-display' class="tip-disp">
-            Tip: 
-        </div>
-
-        <div id='total-pp-display' class="pp-disp">
-            Per Person: 
-        </div>    
-
-    </form>
+    </div>
     
 </body>
 
@@ -74,8 +75,8 @@
             console.log(people)
             console.log(totalPP)
 
-            displayTotal.innerHTML = `Total: $${total.toFixed(2)}`
             displayTip.innerHTML = `Tip: $${tip.toFixed(2)}`
+            displayTotal.innerHTML = `Total: $${total.toFixed(2)}`
             displayTotalPP.innerHTML = `Per Person: $${totalPP.toFixed(2)}`
         }
 
