@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet">
+    <title>Tip Calculator</title>
+</head>
+<body>
+
+    <div class="main-content">
+        <form id='form' class='form'>
+            <div class='bill'>
+                <label>Bill:</label>
+                <input id='bill' type="number" name="bill" placeholder="$">
+            </div>
+            <br>    
+            <div class='tip'>
+                <label>Tip</label>
+                <input id='tip' type="number" name="tip" placeholder="%">
+            </div>
+            <br>    
+            <div class='numppl'>
+                <label>Number of People</label>
+                <input id='numppl' type="number" name="numppl" placeholder="#">
+            </div>
+            <br>
+            <div class='submit'>
+                <input type="submit" name="submit" value="Submit">
+            </div>
+        </form>
+
+            
+        </div>
+
+        <p id='tip-display'>
+        </p>
+
+        <p id='total-display'>
+        </p>
+
+        <p id='total-pp-display'>
+        </p>
+
+    </div>
+
+   
+
+    <script> 
+
+        const inputBill = document.getElementById('bill')
+        const inputTip = document.getElementById('tip')
+        const inputNumppl = document.getElementById('numppl')
+        const form = document.getElementById('form')
+        const displayTip = document.getElementById('tip-display')
+        const displayTotal = document.getElementById('total-display')
+        const displayTotalPP = document.getElementById('total-pp-display')
+
+
+        function calculateTip() {
+
+            const bill = parseInt(inputBill.value)
+            const people = inputNumppl.value 
+            const percent = inputTip.value
+            const tip = bill * percent / 100
+            const total = bill + tip
+            const totalPP = total / people
+            console.log(bill)
+            console.log(percent)
+            console.log(total)
+            console.log(tip)
+            console.log(people)
+            console.log(totalPP)
+
+            displayTip.innerHTML = `Tip: $${tip.toFixed(2)}`
+            displayTotal.innerHTML = `Total: $${total.toFixed(2)}`
+            displayTotalPP.innerHTML = `Per Person: $${totalPP.toFixed(2)}`
+        }
+
+
+
+        form.addEventListener("submit", function(e) {
+            e.preventDefault()
+            calculateTip()
+        }) 
+
+        // inputBill.addEventListnener('change', function(e) {
+        //     console.log(inputBill.value)
+        //     const newBillAMount = parseFloat(e.target.value)
+
+        // })
+
+    </script>
+
+
+
+</body>
+</html>

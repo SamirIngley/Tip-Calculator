@@ -1,0 +1,36 @@
+body {
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+}
+
+div.main-content {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: (4, 1fr);
+    grid-template-rows: (4, 1fr);
+    grid-template-areas: ". . . ."
+                         ". i i ."
+                         ". . . ."
+
+}
+
+
+div.form {
+    display: flex;
+    background-color: lightgreen;
+    padding: 50px;
+    height: 500px;
+}
+
+div.form {
+    display: flex; 
+    grid-area: i;
+}
+
+
+
+
+
+
+

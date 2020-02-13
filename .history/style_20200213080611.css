@@ -1,0 +1,41 @@
+body {
+    background-color: lightblue;
+    margin: 100px;
+}
+
+div.main-content {
+    background-color: lightgreen;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: (2, 1fr);
+    grid-template-rows: (4, 1fr);
+    grid-template-areas: ". ."
+                         ". ."
+                         ". ."
+                         ". ."
+
+}
+
+
+.main-content>div {
+    display: flex;
+    background-color: lightgreen;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    margin: 10px;
+   
+}
+
+.form { 
+    background-color: lightcoral;
+    justify-content: center;
+    align-items: center;
+    border: 10px;
+    padding: 50px;
+    height: 500px;
+    width: 500px;
+}
+
+
+
+

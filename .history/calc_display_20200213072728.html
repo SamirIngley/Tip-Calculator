@@ -18,7 +18,7 @@
             <br>    
             <div>
                 <label>Tip</label>
-                <input id='tip' type="number" name="tip" placeholder="tip amount">
+                <input id='tip' type="number" name="tip" placeholder="tip %">
             </div>
             <br>    
             <div>
@@ -56,17 +56,22 @@
 
         function calculateTip() {
 
-            const bill = parseInt(inputBill.value )
+            const bill = parseInt(inputBill.value)
             const people = inputNumppl.value 
             const percent = inputTip.value
             const tip = bill * percent / 100
             const total = bill + tip
+            const totalPP = ceil(total / people)
+            console.log(bill)
+            console.log(percent)
             console.log(total)
             console.log(tip)
             console.log(people)
+            console.log(totalPP)
 
             displayTip.innerHTML = `Tip: ${tip.toFixed(2)}`
             displayTotal.innerHTML = `Total: ${total.toFixed(2)}`
+            displayTotalPP.innterHTML = `Per Person: ${totalPP}`
         }
 
 
