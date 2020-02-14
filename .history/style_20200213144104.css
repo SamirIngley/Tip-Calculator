@@ -1,5 +1,5 @@
 body {
-    background-color: wheat;
+    background-color: lightblue;
     justify-content: center;
     align-items: center;
     /* margin: 100px; */
@@ -8,14 +8,15 @@ body {
 }
 
 .form {
-    background-color: burlywood;
+    background-color: lightcoral;
     display: grid;
     grid-template-columns: 300px 300px;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-template-areas: "h h"
                          "b d"
-                         "t y"
-                         "n p"
+                         "t d"
+                         "n y"
+                         "s p"
 
 }
 
@@ -23,14 +24,14 @@ body {
 .form {
     font-family: Arial, Helvetica, sans-serif; 
     font-size: 36px;  
-    font-weight: 100;
+    font-weight: 2000;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 700px;
+    height: 500px;
     line-height: 30px;
     margin: 20px;
-    /* padding: 10px; */
+    padding: 50px;
     border-style: solid;
     border-width: 10px;
     border-color: black;
@@ -41,22 +42,30 @@ body {
 }
 
 .bill {
-    text-align: center;
+    text-align: left;
     grid-area: b;
-    font-weight: 20;
+    font-weight: bold;
 }
 
 .tip {
-    text-align: center;
+    text-align: left;
     grid-area: t;
-    font-weight: 20;
+    font-weight: bold;
 }
 
 .numppl {
-    text-align: center;
+    text-align: left;
     grid-area: n;
-    font-weight: 20;
+    font-weight: bold;
 }
+
+.submit {
+    padding: 40px 180px 50px 0px;
+    grid-area: s;
+    align-items: center;
+    
+}
+
 
 .tip-disp {
     grid-area: d;
@@ -68,10 +77,4 @@ body {
 
 .pp-disp {
     grid-area: p
-}
-
-
-.input {
-    padding: 10px;
-    font-size: 20px;
 }

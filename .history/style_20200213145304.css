@@ -1,5 +1,5 @@
 body {
-    background-color: wheat;
+    background-color: lightgreen;
     justify-content: center;
     align-items: center;
     /* margin: 100px; */
@@ -8,14 +8,15 @@ body {
 }
 
 .form {
-    background-color: burlywood;
+    background-color: lightcoral;
     display: grid;
     grid-template-columns: 300px 300px;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-template-areas: "h h"
                          "b d"
                          "t y"
-                         "n p"
+                         "n y"
+                         "s p"
 
 }
 
@@ -58,6 +59,14 @@ body {
     font-weight: 20;
 }
 
+.submit {
+    /* padding: 40px 180px 50px 0px; */
+    grid-area: s;
+    align-items: center;
+    
+}
+
+
 .tip-disp {
     grid-area: d;
 }
@@ -68,10 +77,4 @@ body {
 
 .pp-disp {
     grid-area: p
-}
-
-
-.input {
-    padding: 10px;
-    font-size: 20px;
 }

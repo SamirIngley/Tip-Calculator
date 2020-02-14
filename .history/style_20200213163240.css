@@ -69,9 +69,3 @@ body {
 .pp-disp {
     grid-area: p
 }
-
-
-.input {
-    padding: 10px;
-    font-size: 20px;
-}

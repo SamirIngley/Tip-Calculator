@@ -15,19 +15,19 @@
         </div>
         <div class='bill'>
             <label>Bill</label><br>
-            <input id='bill' type="number" name="bill" placeholder="$" class="input">
+            <input id='bill' type="number" name="bill" placeholder="$">
         </div>  
         <div class='tip'>
             <label>Tip %</label><br>
-            <input id='tip' type="number" name="tip" placeholder="%" class="input">
+            <input id='tip' type="number" name="tip" placeholder="%">
         </div>
         <div class='numppl'>
             <label>People</label><br>
-            <input id='numppl' type="number" name="numppl" placeholder="#" class="input">
+            <input id='numppl' type="number" name="numppl" placeholder="#">
         </div>
-        <!-- <div class='submit'><br>
+        <div class='submit'><br>
             <input type="submit" name="submit" value="Submit">
-        </div> -->
+        </div>
        
 
         <div id='total-display' class="total-disp">
@@ -79,27 +79,6 @@
             displayTotalPP.innerHTML = `Each: $${totalPP.toFixed(2)}`
         }
 
-        form.addEventListener('input', updateBill)
-        function updateBill(e) {
-            const newBill = parseFloat(e.target.value)
-            if (!isNaN(newBill)) {
-                bill = newBill 
-            } else {
-                e.target.value = bill
-            }
-            calculateTip()
-        }
-
-        form.addEventListener('input', updateTip)
-        function updateTip(e) {
-            const newTip = parseFloat(e.target.value)
-            if (!isNaN(newTip)) {
-                tip = newTip
-            } else {
-                e.target.value = tip
-            }
-            calculateTip()
-        }
 
         form.addEventListener('input', updatePercent)
         function updatePercent(e) {
@@ -109,13 +88,14 @@
             } else {
                 e.target.value = percent
             }
-            calculateTip()
         }
 
-        // form.addEventListener("submit", function(e) {
-        //     e.preventDefault()
-        //     calculateTip()
-        // }) 
+
+
+        form.addEventListener("submit", function(e) {
+            e.preventDefault()
+            calculateTip()
+        }) 
 
         // inputBill.addEventListnener('change', function(e) {
         //     console.log(inputBill.value)
